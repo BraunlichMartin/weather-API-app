@@ -1,0 +1,41 @@
+<!--Martin Braunlich lab4 weather application-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div id="app-container">
+        <div class="app">
+
+            <div class="zip-form">
+                <form id="zipForm">
+                    <div class="flex-parent">
+                        <label for="zipcode">Zip</label>
+                        <input class="form-control" type="input" id="zipcode" name="zipcode" value="" required />
+                        <button type="submit" class="btn btn-success"> Get the forcast!</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="weatherList">
+                    <div class="weather-list-item" data-index="INDEX">
+                            <h2> MONTH  / DAY </h2>
+                            <h3> WEEKDAY</h3>
+                            <h3> MIN TEMP &deg;F &#124; MAX TEMP &deg;F</h3>
+                        </div>
+            </div>
+            <div id="currentDay">
+            </div>
+
+        </div>
+    </div>
+    <script src="./dist/weather.js"></script>
+    <!--<script src="./src/js/weather.js"></script>-->
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+WEATHER
+The url with my api key
+http://api.openweathermap.org/data/2.5/forecast?zip=97405&units=imperial&appid=c59493e7a8643f49446baf0d5ed9d646  
+
+The call to fetch
+fetch(`${this.url}${this.state.zipcode}${this.apikey}`)
+	.then(response => response.json())
+	.then(data => { 
+		this.state.city = data.city;
+		this.state.forecast = data.list;
+        this.state.simpleForecast = parseForecast(this.state.forecast);
+		this.state.selectedDate = null;
+		this.$zipcode.value = "";
+		console.log(this.state);
+})
+.catch(error => {
+	alert('There was a problem getting info!'); 
+});
+
+One weather list item 
+<div class="weather-list-item" data-index="INDEX">
+	<h2> MONTH  / DAY </h2>
+	<h3> WEEKDAY</h3>
+	<h3> MIN TEMP &deg;F &#124; MAX TEMP &deg;F</h3>
+</div>
+
+Static weather details for one day
+<div class="current-day">
+	<h1 class="day-header">WEEKDAY in CITY</h1>
+    <div class="weather">
+        <p><img src='http://openweathermap.org/img/w/ICON.png' alt=‘DESCRIPTION’/>
+            DESCRIPTION
+        </p>
+    </div>
+    <div class="details flex-parent">
+	    <div class="temperature-breakdown">
+            <p>Morning Temperature: TEMP &deg;F</p>
+            <p>Day Temperature: TEMP &deg;F</p>
+            <p>Evening Temperature: TEMP &deg;F</p>
+            <p>Night Temperature: TEMP &deg;F</p>
+	    </div>
+    </div>
+</div>
+
