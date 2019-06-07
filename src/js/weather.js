@@ -1,6 +1,6 @@
 import './general';
 console.log("inside weather.js");
-//http://api.openweathermap.org/data/2.5/forecast?zip=97405&units=imperial&appid=c59493e7a8643f49446baf0d5ed9d646
+//http://api.openweathermap.org/data/2.5/forecast?zip=97405&units=
 
 /* Create a class called Weather
 - Part 1 - Retrieve the weather information when the user clicks the buttobn
@@ -14,7 +14,7 @@ console.log("inside weather.js");
           selectedDate: null
         };
         this.url = "http://api.openweathermap.org/data/2.5/forecast?zip=";
-        this.apikey = "&units=imperial&appid=c59493e7a8643f49446baf0d5ed9d646";
+        this.apikey = "&units=imperial&appid=";
     - initialize instance variables for UI elements
         the form
         the zipcode input element
@@ -55,9 +55,9 @@ class Weather {
     this.weatherList = document.getElementById("weatherList");
     this.currentDay = document.getElementById("currentDay");
     this.url = "http://api.openweathermap.org/data/2.5/forecast?zip=";
-    this.apikey = "&units=imperial&appid=e9172124c6178b2d350f6385777db45c";
+    this.apikey = "";
     //google api key
-    this.googleApiKey = "AIzaSyAsmbWuvBtW08mB7uX9yqebfpEEpAAn8DY";
+    this.googleApiKey = "";
     this.googleMapsUrl = "https://maps.googleapis.com/maps/api/timezone/json?location=";
     
     
